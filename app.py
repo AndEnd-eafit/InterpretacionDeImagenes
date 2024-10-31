@@ -8,7 +8,12 @@ st.set_page_config(page_title="Análisis de Imagen", layout="centered", initial_
 st.markdown("<style>body { font-family: 'Lexend', sans-serif; }</style>", unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; font-family: Lexend, sans-serif;'>Análisis de Imagen 🤖🏞️</h1>", unsafe_allow_html=True)
 
+# Imagen centrada
 st.image("Yoru - Interpretacion de imagenes.png", use_column_width=True)
+
+# Función para codificar imagen en base64
+def encode_image(image_file):
+    return base64.b64encode(image_file.getvalue()).decode("utf-8")
 
 # Entrada para clave API
 ke = st.text_input('Ingresa tu Clave')
