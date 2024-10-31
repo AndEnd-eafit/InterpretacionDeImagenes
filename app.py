@@ -9,7 +9,7 @@ st.markdown("<style>body { font-family: 'Lexend', sans-serif; }</style>", unsafe
 st.markdown("<h1 style='text-align: center; font-family: Lexend, sans-serif;'>Análisis de Imagen 🤖🏞️</h1>", unsafe_allow_html=True)
 
 # Imagen centrada
-st.image("Yoru - Interpretacion de imagenes.png", use_column_width=True)
+st.image("ruta_completa/Yoru - Interpretacion de imagenes.jpg", use_column_width=True)
 
 # Función para codificar imagen en base64
 def encode_image(image_file):
