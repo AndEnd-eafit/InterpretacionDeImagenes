@@ -3,6 +3,9 @@ import streamlit as st
 import base64
 from openai import OpenAI
 
+# Configuración de la página debe ser la primera instrucción de Streamlit
+st.set_page_config(page_title="Análisis de Imagen", layout="centered", initial_sidebar_state="collapsed")
+
 # CSS to set custom fonts (Lexend for titles and Inter for text)
 st.markdown("""
     <style>
@@ -28,9 +31,6 @@ st.markdown("""
 # Function to encode the image to base64
 def encode_image(image_file):
     return base64.b64encode(image_file.getvalue()).decode("utf-8")
-
-# Streamlit page setup
-st.set_page_config(page_title="Análisis de Imagen", layout="centered", initial_sidebar_state="collapsed")
 
 # Title and input for API key
 st.markdown('<h1 class="centered-title">Análisis de Imagen 🤖🏞️</h1>', unsafe_allow_html=True)
