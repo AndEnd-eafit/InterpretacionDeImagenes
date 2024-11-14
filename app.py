@@ -84,7 +84,7 @@ if uploaded_file is not None and api_key and analyze_button:
             full_response = ""
             message_placeholder = st.empty()
             for completion in client.chat.completions.create(
-                model="gpt-4o", messages=messages, max_tokens=1200, stream=True
+                model="gpt-4-vision-preview", messages=messages, max_tokens=1200, stream=True
             ):
                 if completion.choices[0].delta.content is not None:
                     full_response += completion.choices[0].delta.content
